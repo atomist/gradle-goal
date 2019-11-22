@@ -4,7 +4,7 @@ An Atomist goal to run Gradle phase from an Software Delivery Machine (SDM).
 
 ## Usage
 
-### Gradle `assmble`
+### Gradle `assemble`
 
 Put the following YAML into your SDM goal definition to use the `assemble`
 task.
