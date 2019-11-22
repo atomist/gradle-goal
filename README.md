@@ -33,7 +33,7 @@ gradle_build:
         options: <optional Gradle options to pass>
         tag: <optional Gradle Docker image tag to use>
 ```    
-s
+
 ## Getting started
 
 See the [Developer Quick Start][atomist-quick] to jump straight to
