@@ -1,0 +1,37 @@
+gradle:
+  containers:
+  - &gradle
+    name: gradle ${parameters.task:assemble}
+    image: gradle:${parameters.tag:6.0.1-jdk8}
+    args:
+      - gradle
+      - ${parameters.task:package}
+      - ${parameters.options:--console=plain}
+  output:
+  - classifier: gradle
+    pattern:
+      directory: build
+  retry: true
+
+gradle-6-jdk-8:
+  containers:
+  - <<: *gradle
+    image: gradle:6.0.1-jdk8
+
+gradle-6-jdk-11:
+  containers:
+    - <<: *gradle
+      image: gradle:6.0.1-jdk11
+
+gradle-6-jdk-13:
+  containers:
+    - <<: *gradle
+      image: gradle:6.0.1-jdk13
+
+assemble:
+  containers:
+    - <<: *gradle
+      args:
+        - mvn
+        - assemble
+        - ${parameters.options:--console=plain}
