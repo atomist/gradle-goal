@@ -17,8 +17,21 @@ gradle_build:
       parameters:
         options: <optional Gradle options to pass>
         tag: <optional Gradle Docker image tag to use>
-```        
+```       
 
+If you want to create a custom Gradle goal that executes a different task, use the following definition
+
+```yaml
+gradle_build:
+  
+  goals:
+  - atomist/gradle-goal/gradle-6-jdk-8@master
+      parameters:
+        task: <Gradle task, by default assemble>
+        options: <optional Gradle options to pass>
+        tag: <optional Gradle Docker image tag to use>
+```    
+s
 ## Getting started
 
 See the [Developer Quick Start][atomist-quick] to jump straight to
