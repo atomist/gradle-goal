@@ -4,7 +4,7 @@ An Atomist goal to run Gradle phase from an Software Delivery Machine (SDM).
 
 ## Usage
 
-### Maven `package`
+### Gradle `assmble`
 
 Put the following YAML into your SDM goal definition to use the `assemble`
 task.
@@ -18,6 +18,8 @@ gradle_build:
         options: <optional Gradle options to pass>
         tag: <optional Gradle Docker image tag to use>
 ```       
+
+### Custom Gradle task
 
 If you want to create a custom Gradle goal that executes a different task, use the following definition
 
